@@ -30,5 +30,8 @@ module.exports = {
         packageDir: './',
       },
     ],
+    'arrow-body-style': 'off',
+    'no-unused-vars': 'off',
+    'react/prop-types': 0,
   },
 };

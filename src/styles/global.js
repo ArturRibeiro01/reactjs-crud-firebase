@@ -13,21 +13,22 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${(props) => props.theme.colors.background};
+    /* background: ${(props) => props.theme.colors.background}; */
     -webkit-font-smoothing: antialiased !important;
-    padding: 1rem;
   }
 
   a {
-    color: ${(props) => props.theme.colors.link}
+    /* color: ${(props) => props.theme.colors.link} */
   }
+
   a.hover {
     text-decoration: underline;
   }
 
   body, input, p, a, button {
-    color: ${(props) => props.theme.colors.text};
+    /* color: ${(props) => props.theme.colors.text};
     font-size: ${(props) => props.theme.fontSizes.normal};
+     */
     font-family: ${(props) => props.theme.fonts};
   }
 
@@ -39,7 +40,4 @@ export default createGlobalStyle`
     cursor: pointer;
   }
 
-  ::placeholder {
-    color: ${(props) => props.theme.colors.champagne};
-  }
 `;

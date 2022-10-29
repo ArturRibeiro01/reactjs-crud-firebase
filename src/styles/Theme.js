@@ -6,7 +6,25 @@ import { ThemeProvider } from 'styled-components';
 const theme = {
   // Palette from FlatUI - https://flatuicolors.com/palette/defo
   colors: {
+    // Default Colors
     white: '#ffffff',
+
+    primary: '#0e1b6b',
+    secondary: '#4763e4',
+    warning: '#dc2626',
+
+    text: '#000',
+    placeholder: '#9fa6b2',
+    borderInput: '#e5e5e5',
+    activeInput: '#5c73dB',
+
+    // Falta colocar cores
+    danger: '#f37272',
+    light: '#ecf0f1',
+    dark: '#233240',
+    background: '#f37272',
+
+    // Other Colors
     black: '#000000',
     turquese: '#1abc9c',
     turqueseDark: '#16a085',
@@ -30,26 +48,22 @@ const theme = {
     asphaltDark: '#2c3e50',
     carbon: '#555459',
     carbonDark: '#3b3a3e',
-
-    // Default colors
-    primary: '#2ecc71',
-    secondary: '#ecf0f1',
-    danger: '#f37272',
-    light: '#ecf0f1',
-    dark: '#233240',
-    background: '#f37272',
-    text: '#fff',
-    link: '#3498db',
-
-    // Brands
-    devSamurai: '#f37272',
   },
-  fonts: ['Open Sans', 'Arial', 'Helvetica', 'sans-serif'].join(','),
+  fonts: ['Inter', 'sans-serif'].join(','),
+
   fontSizes: {
-    small: '.8rem',
-    normal: '1.2rem',
-    large: '1.3rem',
-    title: '1.8rem',
+    small: '.875rem', // 14px
+    normal: '1rem', // 16px
+    normalLarge: '1.125rem', // 18px
+    semiLarge: '1.25rem', // 20px
+    large: '1.75rem', // 28px
+    title: '2rem', // 32px
+  },
+
+  fontWeight: {
+    regular: '400',
+    medium: '500',
+    semibold: '600',
   },
 };
 
