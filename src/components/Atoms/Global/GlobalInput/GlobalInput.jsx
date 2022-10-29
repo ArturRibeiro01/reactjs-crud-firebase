@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Container, Label } from './styles';
+import { Container } from './styles';
 
 export const GlobalInput = ({
   htmlFor,

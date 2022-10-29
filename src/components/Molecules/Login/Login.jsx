@@ -58,6 +58,3 @@ export const Login = () => {
     </>
   );
 };
-
-
-git remote set-url origin https://github.com/ArturRibeiro01/reactjs-crud-firebase.git

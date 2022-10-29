@@ -17,21 +17,10 @@ export const Button = styled.button`
     display: flex;
     gap: 15px;
   }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.2s;
+  }
 `;
-
-// .container form .button {
-//   width: 520px;
-//   font-style: normal;
-//   font-weight: 400;
-//   font-size: 18px;
-//   line-height: 22px;
-
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   gap: 15px;
-// }
-// .container form .button:hover {
-//   cursor: pointer;
-//   opacity: 0.8;
-// }
