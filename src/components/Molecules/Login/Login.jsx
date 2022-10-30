@@ -30,7 +30,23 @@ export const Login = () => {
   }
 
   if (user) {
-    return <p>{console.log(user)}</p>;
+    return (
+      <>
+        <div>
+          <p>Registered User: {user.email}</p>
+          <p>Registered User: {user?.reloadUserInfo?.email}</p>
+        </div>
+        {console.log(user)}
+      </>
+    );
+  }
+
+  if (error) {
+    return (
+      <div>
+        <p>Error: {error.message}</p>
+      </div>
+    );
   }
 
   return (

@@ -20,9 +20,6 @@ export const Register = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
 
-  console.log('art-mail', email);
-  console.log('art-password', password);
-
   const handleSignOut = (event) => {
     event.preventDefault();
     createUserWithEmailAndPassword(email, password);
