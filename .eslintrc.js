@@ -29,6 +29,11 @@ module.exports = {
       {
         packageDir: './',
       },
+      {
+        devDependencies: true,
+        optionalDependencies: true,
+        peerDependencies: true,
+      },
     ],
     'arrow-body-style': 'off',
     'no-unused-vars': 'off',

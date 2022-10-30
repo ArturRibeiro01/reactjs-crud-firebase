@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { auth } from '../../../services/firebaseConfig';
+
 import { GlobalInput } from '../../Atoms/Global/GlobalInput/GlobalInput';
 import { ButtonSubmit } from '../../Atoms/Global/ButtonSubmit/ButtonSubmit';
 
@@ -14,8 +17,20 @@ export const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // console.log('art-mail', email);
-  // console.log('art-password', password);
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
+
+  console.log('art-mail', email);
+  console.log('art-password', password);
+
+  const handleSignOut = (event) => {
+    event.preventDefault();
+    createUserWithEmailAndPassword(email, password);
+  };
+
+  if (loading) {
+    return <p>Carregando</p>;
+  }
 
   return (
     <>
@@ -45,7 +60,12 @@ export const Register = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <ButtonSubmit text="Cadastrar" width="" icon={arrowImg} />
+          <ButtonSubmit
+            text="Cadastrar"
+            width=""
+            icon={arrowImg}
+            onClick={handleSignOut}
+          />
 
           <footer>
             <p>Se você já tiver uma conta criada</p>

@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { auth } from '../../../services/firebaseConfig';
+
 import { GlobalInput } from '../../Atoms/Global/GlobalInput/GlobalInput';
 import { ButtonSubmit } from '../../Atoms/Global/ButtonSubmit/ButtonSubmit';
 
@@ -14,8 +17,21 @@ export const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // console.log('art-mail', email);
-  // console.log('art-password', password);
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(email, password);
+  };
+
+  if (loading) {
+    return <p>Carregando</p>;
+  }
+
+  if (user) {
+    return <p>{console.log(user)}</p>;
+  }
 
   return (
     <>
@@ -47,7 +63,12 @@ export const Login = () => {
 
           <a href="https://www.globo.com/">Esqueceu sua senha ?</a>
 
-          <ButtonSubmit text="Entrar" width="" icon={arrowImg} />
+          <ButtonSubmit
+            text="Entrar"
+            width=""
+            icon={arrowImg}
+            onClick={handleSignIn}
+          />
 
           <footer>
             <p>Você não tem uma conta?</p>
