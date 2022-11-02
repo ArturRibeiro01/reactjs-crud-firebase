@@ -29,11 +29,11 @@ module.exports = {
       {
         packageDir: './',
       },
-      {
-        devDependencies: true,
-        optionalDependencies: true,
-        peerDependencies: true,
-      },
+      // {
+      //   devDependencies: false,
+      //   optionalDependencies: false,
+      //   peerDependencies: false,
+      // },
     ],
     'arrow-body-style': 'off',
     'no-unused-vars': 'off',

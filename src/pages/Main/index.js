@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container } from './styles';
 
-function Main() {
+const Main = () => {
   return (
     <Container>
       <img
@@ -14,6 +14,6 @@ function Main() {
       <p>Esse é o template básico da Dev Samurai para React.</p>
     </Container>
   );
-}
+};
 
 export default Main;

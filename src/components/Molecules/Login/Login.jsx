@@ -10,6 +10,8 @@ import { ButtonSubmit } from '../../Atoms/Global/ButtonSubmit/ButtonSubmit';
 
 import { Container } from './styles';
 
+import Main from '../../../pages/Main/index';
+
 import logoImg from '../../../assets/logo.svg';
 import arrowImg from '../../../assets/arrow.svg';
 
@@ -32,11 +34,10 @@ export const Login = () => {
   if (user) {
     return (
       <>
-        <div>
-          <p>Registered User: {user.email}</p>
-          <p>Registered User: {user?.reloadUserInfo?.email}</p>
-        </div>
         {console.log(user)}
+        <p>Email:{user.user.email}</p>
+        <p>{user.operationType}</p>
+        <Main />
       </>
     );
   }
@@ -44,7 +45,7 @@ export const Login = () => {
   if (error) {
     return (
       <div>
-        <p>Error: {error.message}</p>
+        <p>Errado: {error.message}</p>
       </div>
     );
   }
