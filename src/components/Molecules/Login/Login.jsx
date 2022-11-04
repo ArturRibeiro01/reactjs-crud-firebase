@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from '../../../services/firebaseConfig';
@@ -35,9 +35,11 @@ export const Login = () => {
     return (
       <>
         {console.log(user)}
+        {console.log('auth', auth)}
         <p>Email:{user.user.email}</p>
         <p>{user.operationType}</p>
-        <Main />
+
+        <p>{auth.currentUser.email}</p>
       </>
     );
   }

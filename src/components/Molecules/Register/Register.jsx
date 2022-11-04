@@ -33,7 +33,7 @@ export const Register = () => {
     <>
       <Container>
         <header className="header">
-          <img src={logoImg} alt="Workflow" className="logoImg" />
+          {/* <img src={logoImg} alt="Workflow" className="logoImg" /> */}
           <span>Por favor faça o seu cadastro</span>
         </header>
 
